@@ -19,13 +19,15 @@ const WidgetItem = styled.div`
   width: 300px;
   height: 80px;
   border: 1px solid grey;
-  border-radius: 8px;
+  border-radius: 8px
   margin-bottom: ${grid}px;
   background-color: gray;
-  opacity: 0.5;
+  opacity: 0.80;
   padding: ${grid}px;
   box-shadow: 0 0 5px #eee;
 `;
+
+
 
 function Widget({ widget, index }) {
   return (
@@ -128,7 +130,7 @@ const DashboardApp = () => {
         <Column widgets={state.widgets["column-1"]} droppableId="column-1" />
         <Column widgets={state.widgets["column-2"]} droppableId="column-2" />
         <Column widgets={state.widgets["column-3"]} droppableId="column-3" />
-
+        <Column widgets={state.widgets["column-4"]} droppableId="column-4" />
       </Container>
     </DragDropContext>
   );

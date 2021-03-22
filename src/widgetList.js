@@ -36,6 +36,12 @@ const widgetList = {
         id: "widget-8",
         content: "lol"
       }
+    ],
+    "column-4": [
+      {
+        id: "widget-9",
+        content: "lolz"
+      }
     ]
   };
   

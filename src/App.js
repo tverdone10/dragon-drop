@@ -16,8 +16,8 @@ const reorder = (list, startIndex, endIndex) => {
 };
 
 const WidgetItem = styled.div`
-  width: 300px;
-  height: 80px;
+  width: 360x;
+  height: 240px;
   border: 1px solid grey;
   border-radius: 8px
   margin-bottom: ${grid}px;
@@ -37,6 +37,7 @@ function Widget({ widget, index }) {
           ref={provided.innerRef}
           {...provided.draggableProps}
           {...provided.dragHandleProps}
+          id={widget.id}
         >
           {widget.content}
         </WidgetItem>
@@ -47,7 +48,7 @@ function Widget({ widget, index }) {
 
 const WidgetList = React.memo(function WidgetList({ widgets }) {
   return widgets.map((widget, index) => (
-    <Widget widget={widget} index={index} key={widget.id} />
+    <Widget widget={widget} index={index} key={widget.id}/>
   ));
 });
 
@@ -129,8 +130,6 @@ const App = () => {
       <Container columnCount={columnCount}>
         <Column widgets={state.widgets["column-1"]} droppableId="column-1" />
         <Column widgets={state.widgets["column-2"]} droppableId="column-2" />
-        <Column widgets={state.widgets["column-3"]} droppableId="column-3" />
-        <Column widgets={state.widgets["column-4"]} droppableId="column-4" />
       </Container>
     </DragDropContext>
   );
